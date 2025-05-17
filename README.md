@@ -25,4 +25,10 @@ Before running the notebooks, install all required dependencies by running:
 ```bash
 pip install -r requirements.txt
 
+## Acknowledgment
+
+This code was developed for the research thesis titled  
+**"Evaluating the Impact of Responsible AI as a Security Control in Machine Learning"**  
+by **Jui Bangali**, under the guidance of **Professor Brent Lagesse**,  
+as part of the Master's in Cybersecurity Engineering program at the **University of Washington, Bothell**.
 
