@@ -18,4 +18,11 @@ Refer to the Jupyter notebooks for a complete flow from training to evaluation. 
 
 This setup allows you to quickly plug in your own data and models while maintaining the same fairness, error, and explainability evaluation workflow.
 
+## Installation
+
+Before running the notebooks, install all required dependencies by running:
+
+```bash
+pip install -r requirements.txt
+
 
