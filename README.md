@@ -1,9 +1,19 @@
-# Evaluating the Impact of Responsible AI as a Security Control in Machine Learning
-This research explores whether applying **Microsoft's Responsible AI (RAI) principles** can improve the security of machine learning models. It compares a baseline model (built without RAI considerations) with a mitigated model (enhanced using RAI tools) to evaluate impact on security and robustness of machine learning model.
+# Evaluating Microsoft Responsible AI as Defense Against Label Flip and ZOO Attacks
+This project investigates whether applying **Microsoft's Responsible AI (RAI) principles** can improve the security and robustness of machine learning models on **tabular data**.
 
-Adversarial testing is conducted using the **Adversarial Robustness Toolbox (ART)**, using two attacks customized for the tabular data.
-- **Zeroth Order Optimization (ZOO) evasion attack**  
-- **Label flip poisoning attack**
+Comparison involves:
+- A **baseline model** (trained without RAI considerations), and
+- An **RAI-enhanced model** (developed using RAI practices like fairness assessment, error analysis, and transparency).
+
+To evaluate robustness, **Adversarial Robustness Toolbox (ART)** is used with the two attacks customized for tabular data:
+- **Zeroth Order Optimization (ZOO)** evasion attack  
+- **Label flip poisoning** attack
+
+For the baseline model, **post-attack defenses** are applied:
+- **ZOO**: High-confidence prediction filtering  
+- **Label flip**: Noisy label detection via **Cleanlab** and outlier filtering using **Isolation Forest**
+
+The **RAI-enhanced model** does not use these reactive defenses but is designed using RAI principles from the start. This allows fair comparison of **RAI-driven robustness** with traditional defensive techniques in adversarial scenarios.
 
 Dashboards are generated using **Microsoft's Responsible AI Toolbox** to visualize errors, fairness metrics, and interpretability.
 
@@ -27,8 +37,8 @@ pip install -r requirements.txt
 
 ## Acknowledgment
 
-This code was developed for the research thesis titled  
-**"Evaluating the Impact of Responsible AI as a Security Control in Machine Learning"**  
+This code was developed for the research project titled  
+**"Evaluating Microsoft Responsible AI as Defense Against Label Flip and ZOO Attacks"**  
 by **Jui Bangali**, under the guidance of **Professor Brent Lagesse**,  
 as part of the Master's in Cybersecurity Engineering program at the **University of Washington, Bothell**.
 
